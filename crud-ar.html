@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2230/2230515.png">
+    <title>ماركت مرسال</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-ar.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="Theme">
+            <a href="crud.html" class="lang">EN</a>
+            <button id="theme-toggle"><img src="images/sun.png" alt="Light Mood"></button>
+     </div>
+     <div class="head">
+        <h2>مرسال</h2>
+        <p>نظام ادارة المنتجات</p>
+     </div>
+
+     <div class="inputs">
+        <input type="text" id="title" placeholder="عنوان المنتج">
+        <div class="price">
+            <input type="number" onkeyup="getTotal()" id="price" placeholder="السعر">
+            <input type="number" onkeyup="getTotal()" id="taxes" placeholder="الضرائب">
+            <input type="number" onkeyup="getTotal()" id="ads" placeholder="الاعلانات">
+            <input type="number" onkeyup="getTotal()" id="discount" placeholder="الخصم بـ الجنيه">
+            <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="العدد">
+        <input type="text" id="category" placeholder="الصنف">
+        <button id="submit">أنشئ منتج</button>
+     </div>
+
+     <div class="outputs">
+        <div class="searchBlock">
+            <input type="search" placeholder="أبحث" id="search" onkeyup="searchDate(this.value)">
+            <div class="btnSearch">
+                <button id="searchTitle" onclick="getSearchMood(this.id)">أبحث بواسطة عنوان المنتج</button>
+                <button id="searchCategory" onclick="getSearchMood(this.id)">أبحث بواسطة صنف المنتج</button>
+            </div>
+        </div>
+        
+     <div id="Delete-All">
+
+        
+     </div>
+    
+          <table>
+            <tr>
+                <th>الرقم</th>
+                <th>العنوان</th>
+                <th>السعر</th>
+                <th>الضرائب</th>
+                <th>الاعلانات</th>
+                <th>الخصم</th>
+                <th>الاجمالي</th>
+                <th>الصنف</th>
+                <th>تحديث المنتج</th>
+                <th>مسح المنتج</th>
+            </tr>
+
+            <tbody id="tbody">
+               
+            </tbody>
+          </table>
+         </div>
+    </div>
+</body>
+<script src="js/main-ar.js"></script>
+</html>
